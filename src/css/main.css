@@ -1,0 +1,98 @@
+*{
+    margin:0;padding: 0;
+}
+ul{
+    list-style: none;
+}
+input[type = 'text']{
+    width: 230px;height: 20px;text-align: right;
+}
+.calendar{
+    width: 230px;background-color: rgb(22, 22, 22);color: rgb(219, 219, 219);
+    box-sizing: border-box;padding: 3px 8px 10px;border-radius: 10px;display: none;
+}
+.addCalendar{
+    display: block;
+}
+.calendar .yearMouth{
+    width: 100%;height: 30px;display: flex;align-items: flex-end;margin: 5px 0 3px;
+    border-bottom: 1px solid rgba(63, 63, 63, 0.278);box-sizing: border-box;
+    padding-bottom: 3px;
+}
+.calendar .year{
+    width: 65%;display: flex;align-items: center;justify-content: space-between;
+    box-sizing: border-box;font-size: 20px;
+}
+.calendar .year span{
+    font-size: 20px;cursor: pointer;opacity: 0.05;
+}
+.calendar .yearMouth i{
+    font-style: normal;cursor: pointer;position: relative;
+}
+.calendar .year i b{
+    font-weight: 540;
+}
+.calendar .year:hover span{
+    animation: arrow 0.2s linear forwards;
+}
+.calendar .mouth{
+    width: 35%;display: flex;align-items: center;justify-content: space-between;font-size: 16px;
+}
+.calendar .mouth span{
+    font-size: 16px;cursor: pointer;opacity: .05;
+}
+.calendar .mouth i b{
+    font-weight: 540;
+}
+.calendar .mouth:hover span{
+    animation: arrow 0.2s linear forwards;
+}
+.calendar .yearMouth .shuru{
+    display: none;position: absolute;top: 0;background-color: rgb(37, 37, 37);
+    border: none;padding: 0px 3px;box-sizing: border-box;color: rgb(219, 219, 219);
+    font-size: 20px;border-radius: 5px;
+}
+.calendar .mouth .shuru{
+    left: -12px;
+}
+.calendar .yearMouth .addInput{
+    display: block;
+}
+.calendar .week{
+    box-sizing: border-box;
+    display: flex;align-items: center;margin-bottom:1px ;padding-bottom: 2px;
+}
+.calendar .week li{
+    width: 14.25%;font-size: 14px;text-align: center;box-sizing: border-box;
+    padding:  2px 0;
+}
+.calendar .day{
+    display: flex;flex-wrap: wrap;text-align: center;
+}
+.calendar .day li{
+    width: 14.25%;font-size: 14px;cursor: pointer;box-sizing: border-box;
+    padding: 2px 0;border-radius: 3px;
+}
+.calendar .day .bkc{
+    background-color: rgb(151, 34, 57);color: rgb(228, 228, 228);
+}
+.calendar .select{
+    width: 80%;display: flex;align-items: center;justify-content: space-around;
+    margin: 0 auto;font-size: 14px;text-align: center;margin-top: 8px;
+}
+.calendar .select .no{
+    width: 40%;cursor: pointer;background-color: rgba(222, 184, 135, 0.062);box-sizing: border-box;
+    padding: 3px 0;border-radius: 3px;
+}
+.calendar .select .yes{
+    width: 40%;cursor: pointer;background-color: rgba(128, 255, 0, 0.048);box-sizing: border-box;
+    padding: 3px 0;border-radius: 3px;
+}
+@keyframes arrow{
+    from{
+        opacity: 0.05;
+    }
+    to{
+        opacity: 0.5;
+    }
+}
